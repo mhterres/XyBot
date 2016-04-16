@@ -1,0 +1,9 @@
+[Core]
+Name = bot_changelog
+Module = bot_changelog
+   
+[Documentation]
+Description = Plugin to show bot changelog
+Author = Marcelo Terres
+Version = 0.1
+Website = http://www.mundoopensource.com.br

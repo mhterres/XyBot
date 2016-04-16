@@ -1,0 +1,9 @@
+[Core]
+Name = sms
+Module = sms
+   
+[Documentation]
+Description = Plugin to send SMS via Asterisk
+Author = Marcelo Terres
+Version = 0.1
+Website = http://www.mundoopensource.com.br

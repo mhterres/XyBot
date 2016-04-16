@@ -1,0 +1,9 @@
+[Core]
+Name = plugins
+Module = plugins
+   
+[Documentation]
+Description = Plugin to show plugins installed
+Author = Marcelo Terres
+Version = 0.1
+Website = http://www.mundoopensource.com.br

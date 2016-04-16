@@ -1,0 +1,9 @@
+[Core]
+Name = call
+Module = call
+   
+[Documentation]
+Description = Plugin to make calls via Asterisk
+Author = Marcelo Terres
+Version = 0.1
+Website = http://www.mundoopensource.com.br

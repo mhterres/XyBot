@@ -1,0 +1,32 @@
+[general]
+botname=myname
+logfile=/var/log/xybot.log
+debug=0
+
+[xmpp]
+jid=myname@yourjabberdomain.com
+jid_pwd=secret
+xmpp_domain=yourjabberdomain.com
+
+roomname=yourroom
+confsrv=conference.yourjabberdomain.com
+
+[dbpgsql]
+dbpgsql_host=postgresql host
+dbpgsql_database=database name
+dbpgsql_user=database user
+dbpgsql_pwd=secret
+
+[asterisk]
+ami_srv=Asterisk server
+ami_port=5038
+ami_user=Manager user
+ami_pwd=secret
+
+ast_db_host=Asterisk DB Server
+ast_db_name=asterisk
+ast_db_user=asterisk
+ast_db_pwd=secret
+ast_sip_table=sip
+ast_jid_field_prefix=xmpp_
+

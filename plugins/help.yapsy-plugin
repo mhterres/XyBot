@@ -1,0 +1,9 @@
+[Core]
+Name = help
+Module = help
+   
+[Documentation]
+Description = Plugin to show help
+Author = Marcelo Terres
+Version = 0.1
+Website = http://www.mundoopensource.com.br

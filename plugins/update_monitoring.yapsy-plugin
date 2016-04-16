@@ -1,0 +1,9 @@
+[Core]
+Name = update_monitoring
+Module = update_monitoring
+   
+[Documentation]
+Description = Plugin to update monitoring values
+Author = Marcelo Terres
+Version = 0.1
+Website = http://www.mundoopensource.com.br

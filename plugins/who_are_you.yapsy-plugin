@@ -1,0 +1,9 @@
+[Core]
+Name = who_are_you
+Module = who_are_you
+   
+[Documentation]
+Description = Plugin to show who bot is
+Author = Marcelo Terres
+Version = 0.1
+Website = http://www.mundoopensource.com.br

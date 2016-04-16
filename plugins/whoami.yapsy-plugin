@@ -1,0 +1,9 @@
+[Core]
+Name = whoami
+Module = whoami
+   
+[Documentation]
+Description = Plugin to show who am I
+Author = Marcelo Terres
+Version = 0.1
+Website = http://www.mundoopensource.com.br

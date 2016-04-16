@@ -1,0 +1,15 @@
+[xmppserver]
+type=client
+serverhost=yourJabberServer
+username=asterisk@yourJabberDomain
+secret=secret
+priority=1
+usetls=yes
+port=5222
+usesasl=yes
+status=available
+statusmessage="Asterisk Server"
+sendtodialplan=yes
+context=from_xmpp
+keepalive=yes
+

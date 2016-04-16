@@ -1,0 +1,10 @@
+# Requirements
+
+* XMPP server 
+* XMPP SRV DNS entries configured for your jabberdomain
+* Asterisk 11 or later
+* Asterisk integrated with XMPP server (sample config file in asterisk/etc)
+* PostgreSQL server
+* sleekxmpp python library (https://github.com/fritzy/SleekXMPP)
+* psycopg2 python library
+* yapsy python Library (http://yapsy.sourceforge.net/)
