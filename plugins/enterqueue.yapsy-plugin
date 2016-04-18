@@ -1,0 +1,9 @@
+[Core]
+Name = enterqueue
+Module = enterqueue
+   
+[Documentation]
+Description = Plugin to enter an extension in an Asterisk queue
+Author = Marcelo Terres
+Version = 0.1
+Website = http://www.mundoopensource.com.br

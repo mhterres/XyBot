@@ -3,5 +3,5 @@ name=iax-propus
 script=iaxpeerstatus.py propus
 message=IAX Propus %s.
 newmessage=IAX Propus %s.
-check=120
+check=1800
 integer=0
