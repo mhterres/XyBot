@@ -3,7 +3,9 @@ XMPP MUC bot that interacts with Asterisk - Proof of Concept
 
 This project (PoC) shows the possibilities of use of an XMPP bot integrated with an Asterisk server.
 
-The goal of this project is to allow users to control their Asterisk extensions directly from their XMPP client. The project was developed to be generic as possible, using plugins to add new features to bot. Also, you can use the XyBot to monitor services or anything else you want.
+The main goal of this project is to enable users to interact with asterisk directly from your XMPP client.
+
+Xybot was built to provide an expandable structure of plugins and monitors that allow system administrators to deploy their own resources.
 
 The directories contains:
 
