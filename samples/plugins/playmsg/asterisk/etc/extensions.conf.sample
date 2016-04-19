@@ -1,0 +1,6 @@
+exten => 1111,1,NoOp(Playing message - XyBot example)
+same => n,Answer()
+same => n,Set(PLAYMSG=${DB(asterisk/playmsg)})
+same => n,GotoIf($["${LEN(${PLAYMSG})}" = "1"]?playmsg:queue)
+same => n(playmsg),Playback(message)
+same => n(queue),Queue(myqueue)

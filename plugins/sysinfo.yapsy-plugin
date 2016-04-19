@@ -1,0 +1,9 @@
+[Core]
+Name = sysinfo
+Module = sysinfo
+   
+[Documentation]
+Description = Plugin to show Asterisk System Information
+Author = Marcelo Terres
+Version = 0.1
+Website = http://www.mundoopensource.com.br

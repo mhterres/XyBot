@@ -1,0 +1,9 @@
+[Core]
+Name = playmsg
+Module = playmsg
+   
+[Documentation]
+Description = Plugin to enable/disable playing a message when answering a call
+Author = Marcelo Terres
+Version = 0.1
+Website = http://www.mundoopensource.com.br

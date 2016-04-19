@@ -1,0 +1,62 @@
+Installation
+************
+
+This document supposes the following scenario:
+
+* All requirements are ok (docs/Requeriments)
+* Asterisk was compiled from source
+* Asterisk is using the english language
+* Asterisk is using PJSIP
+
+If you have a different scenario, you will need to change some directories in following operations.
+
+XMPP
+****
+
+First, create a xybot XMPP account in your XMPP server.
+
+PostgreSQL
+**********
+
+Create an user and database with name xybot and import the .sql file in database.
+
+su - postgres
+createuser -P -S -D -R xybot
+createdb -O xybot xybot
+exit
+cat db/dbpgsql.sql | psql -U xybot -W xybot -h 127.0.0.1
+
+If you are using Asterisk Realtime, you can add some columns in your own sip peer table (see db/asterisk_dbpgsql_sample.sql - special attention to xmpp_* columns).
+
+If you are not using Asterisk Realtime or you don't want to alter your database (recommended), you can use the sample asterisk database. To use it, run this commands:
+
+su - postgres
+createuser -P -S -D -R asterisk_xybot
+createdb -O asterisk_xybot asterisk_xybot
+exit
+cat db/asterisk_dbpgsql_sample.sql | psql -U asterisk_xybot -W asterisk_xybot -h 127.0.0.1
+
+If you used your own database, fill the xmpp_* columns in your records. If you are using the sample database, create the extensions on sip table.
+
+Asterisk
+********
+
+Create a new manager user (/etc/asterisk/manager.conf) that will be used by XyBot (sample configuration file in asterisk/etc/manager.conf.sample). 
+
+After create the new user, reload the manager configuration in Asterisk.
+
+Final configurations
+********************
+
+Access XyBot directory and run this commands:
+
+mkdir /etc/xybot
+cp config/xybot.conf.sample /etc/xybot/xybot.conf
+
+Edit file /etc/xybot/xybot.conf and adjust the parameters
+
+
+SAMPLES
+*******
+If you want to use queuemonitorholdtime monitor and/or playmsg plugin, you should use the sample data in samples subdirectory.
+

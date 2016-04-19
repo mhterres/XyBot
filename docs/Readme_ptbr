@@ -1,0 +1,25 @@
+Monitors
+********
+* iaxpeerstatus - envia uma mensagem quando o status do peer iax monitorado muda.
+* asteriskprocess - envia uma mensagem quando o status do processo do Asterisk muda.
+* queuemonitorholdtime - envia uma mensagem se o tempo de espera na fila for maior que o tempo maximo permitido. Envia nova mensagem quando o tempo de espera volta ao valor aceitável.
+
+Plugins
+*******
+* bot_changelog: exibe o changelog
+* call: faz uma ligação para um ramal, se o jid tiver permissão
+* enterqueue: adiciona o ramal em uma fila
+* help: exibe o help
+* history: lista o histórico da sala
+* last: listas as últimas entradas e saídas de usuários da sala
+* leavequeue: remove o ramal de uma fila
+* monitoring: exibe os itens monitorados e seus valores
+* playmsg: configura o asterisk para "tocar uma mensagem de áudio". Usadp em conjunto com o plano de discagem (somente para admins) - veja o subdiretório samples
+* plugins: exibe os plugins disponíveis
+* sms: envia um SMS, se o jid tiver permissão
+* sysinfo: mostra informações do Asterisk (somente admins)
+* update_monitoring: recheca os scripts de monitoramentos e atualiza os dados
+* uptime: mostra o uptime do bot
+* whoami: mostra suas informações
+* who_are_you: mais informações sobre XyBot
+

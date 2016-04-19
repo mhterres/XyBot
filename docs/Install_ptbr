@@ -1,0 +1,62 @@
+Instalação da PoC
+*****************
+
+Este documento supõe que exista o seguinte cenário:
+
+* Os requerimentos indicados (docs/Requerimentos) estejam sendo atendidos
+* O Asterisk tenha sido compilado dos fontes
+* O Asterisk esteja configurado para uso da linguagem pt_br
+* O Asterisk está usando PJSIP
+
+Se o cenário for diferente, você precisará alterar alguns diretórios nos comandos seguintes
+
+XMPP
+****
+
+Primeiro, crie uma conta XMPP para o XyBoy no seu servidor XMPP.
+
+PostgreSQL
+**********
+
+Crie um usuário e um banco de dados com o nome xybot e carregue o arquivo .sql existente no diretório db.
+
+su - postgres
+createuser -P -S -D -R xybot
+createdb -O xybot xybot
+exit
+cat db/dbpgsql.sql | psql -U xybot -W xybot -h 127.0.0.1
+
+Se você estiver usando Realtime no Asterisk, você pode adicionar algumas colunas na sua tabela SIP (veja db/asterisk_dbpgsql_sample.sql - atenção especial as colunas xmpp_*)
+
+Se você não estiver usando Realtime no Asterisk or não quiser alterar seu banco de dados (recomendado), você pode utilizar o banco de dados modelo. Para usá-lo, rode os comandos:
+
+su - postgres
+createuser -P -S -D -R asterisk_xybot
+createdb -O asterisk_xybot asterisk_xybot
+exit
+cat db/asterisk_dbpgsql_sample.sql | psql -U asterisk_xybot -W asterisk_xybot -h 127.0.0.1
+
+Se você usar seu próprio db, preencha as colunas xmpp_* de seus registros. Se você usar o banco de exemplo, criar os ramais na tabela sip.
+
+Asterisk
+********
+
+Crie um novo usuário para o manager (/etc/asterisk/manager.conf) para ser usado pelo XyBot (você encontra um arquivo de configuração de exemplo em asterisk/etc/manager.conf.sample). 
+
+Depois de criar o usuário, recarregue as configuração do manager no Asterisk.
+
+Configurações finais
+********************
+
+Acesse o diretório XyBot directory e rode os seguintes comandos:
+
+mkdir /etc/xybot
+cp config/xybot.conf.sample /etc/xybot/xybot.conf
+
+Edite o arquivo /etc/xybot/xybot.conf e ajuste os parâmetros
+
+
+SAMPLES
+*******
+Se você quiser usar o monitor queuemonitorholdtime  e/ou o plugin playmsg, você deve usar os dados de exemplo que existem no subdiretório samples.
+

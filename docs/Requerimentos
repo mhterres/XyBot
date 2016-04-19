@@ -2,10 +2,13 @@
 
 * Servidor XMPP com suporte pubsub  (testado com ejabberd)
 * Entradas SRV para seu domínio jabber configuradas no seu DNS
+* Seu servidor XMPP deve ter pelo menos uma sala de conferência criada
+* Seu servidor DNS deve resolver o endereço do seu serviço de conferência XMPP
 * Asterisk 11 (ou superior)
 * Asterisk integrado com o servidor XMPP (arquivo de config de exemplo em asterisk/etc)
 * Servidor PostgreSQL
 * biblioteca python sleekxmpp instalada (https://github.com/fritzy/SleekXMPP)
 * biblioteca python psycopg2 instalada
 * biblioteca python yapsy instalada (http://yapsy.sourceforge.net/)
+* psutil (python system and process utilities)
 

@@ -57,7 +57,8 @@ CREATE TABLE sip (
     callerid character varying(150) NOT NULL,
     xmpp_jid character varying(150),
     xmpp_allow_call boolean DEFAULT false NOT NULL,
-    xmpp_allow_sms boolean DEFAULT false NOT NULL
+    xmpp_allow_sms boolean DEFAULT false NOT NULL,
+    xmpp_allow_admin_cmd boolean DEFAULT false NOT NULL
 );
 
 

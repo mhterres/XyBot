@@ -1,6 +1,11 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
+# iaxpeerstatus.py
+# return the status of an iax perr
+#
+# syntax: iaxpeerstatus.py <peer name>
+
 import os
 import sys
 import time

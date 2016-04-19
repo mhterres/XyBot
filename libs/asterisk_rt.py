@@ -19,7 +19,7 @@ def getAsteriskRealtimeInformation(cfg,jid):
     conn = psycopg2.connect(dsn)
     curs = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
 
-    sql = "SELECT name,callerid,%sjid,%sallow_call,%sallow_sms from %s where %sjid='%s';" % (cfg.ast_jid_field_prefix,cfg.ast_jid_field_prefix,cfg.ast_jid_field_prefix,cfg.ast_sip_table,cfg.ast_jid_field_prefix,jid)
+    sql = "SELECT name,callerid,%sjid,%sallow_call,%sallow_sms,%sallow_admin_cmd from %s where %sjid='%s';" % (cfg.ast_jid_field_prefix,cfg.ast_jid_field_prefix,cfg.ast_jid_field_prefix,cfg.ast_jid_field_prefix,cfg.ast_sip_table,cfg.ast_jid_field_prefix,jid)
     logging.debug(sql)
 
     try:
@@ -28,13 +28,13 @@ def getAsteriskRealtimeInformation(cfg,jid):
 
         if not curs.rowcount:
             logging.error("Can't find extension for jid %s - SQL: %s." % (jid,sql))
-            data=[1,"Can't find the extension for your jid." ,"","","","",""]
+            data=[1,"Can't find the extension for your jid." ,"","","","","",""]
             return data
 
     except:
 
         logging.error("Can't connect in Asterisk DB - SQL: %s." % sql)
-        data=[1,"Can't connect in Asterisk DB.","","","","",""]
+        data=[1,"Can't connect in Asterisk DB.","","","","","",""]
     else:
 
         row=curs.fetchone()
@@ -43,7 +43,8 @@ def getAsteriskRealtimeInformation(cfg,jid):
         callerid = row['callerid']
         allow_sms = row['xmpp_allow_sms']
         allow_call = row['xmpp_allow_call']
-        data=[0,"",name,jid,callerid,allow_sms,allow_call]
+        allow_admin_cmd = row['xmpp_allow_admin_cmd']
+        data=[0,"",name,jid,callerid,allow_sms,allow_call,allow_admin_cmd]
 
     return data
 

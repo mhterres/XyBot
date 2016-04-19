@@ -14,7 +14,8 @@ The directories contains:
 * monitor - monitor files
 * monitor/scripts - scripts used by monitor files
 * plugins - plugins files
+* samples - sample files for some plugins and monitor items
 * tests - scripts for testing
 
 If you find bugs, please send e-mail to bugs@mundoopensource.com.br.
-~                                                                     
+                                                                    

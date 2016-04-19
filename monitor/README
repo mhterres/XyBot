@@ -1,0 +1,9 @@
+.mon file parameters
+
+[general]
+name=name of the monitor (same of .mon file, without extension)
+script=script to run with parameters (script must be inside of scripts subdirectory and must be executable)
+message=Message to exhibit (accept %s for parameter substitution)
+newmessage=New message to exhibit (in most cases, the same of "message").
+check=numbers of seconds between checks
+integer=0 or 1. If script returns should be used as an integer, use 1.

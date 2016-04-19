@@ -1,0 +1,26 @@
+Monitors
+********
+* iaxpeerstatus - send a message when the status of an iax peer changes.
+* asteriskprocess - send a message when the status of Asterisk process changes.
+* queuemonitorholdtime - send a message if the hold time of a queue if greater than the maximum hold time allowed. Send another message when hold time returns to acceptable values.
+
+Plugins
+*******
+* bot_changelog: exhibit the bot changelog
+* call: make a call to an extensions, if jid has permission
+* enterqueue: enter extension in a queue
+* help: show help
+* history: list history of MUC
+* last: list last logons and logoffs
+* leavequeue: remove extension from a queue
+* monitoring: show monitoring itens and its values
+* playmsg: set Asterisk to "play an audio message". Used in conjuction with dialplan (admins only) - see samples subdirectory
+* plugins: show plugins available
+* sms: send a text message, if jid has permissions
+* sysinfo: show Asterisk system informatios (admins only)
+* update_monitoring: recheck monitoring scripts and update data
+* uptime: show bot uptime
+* whoami: show your informations
+* who_are_you: more informations about bot
+
+

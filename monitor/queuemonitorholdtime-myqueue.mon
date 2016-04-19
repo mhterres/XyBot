@@ -1,0 +1,7 @@
+[general]
+name=queuemonitorholdtime-myqueue
+script=queuemonitorholdtime.py myqueue 10
+message=%s
+newmessage=%s
+check=120
+integer=0
