@@ -1,5 +1,5 @@
 # XyBot
-XMPP MUC bot that interacts with Asterisk - Proof of Concept
+XMPP MUC bot that allows users to interact with Asterisk - Proof of Concept
 
 This project (PoC) shows the possibilities of use of an XMPP bot integrated with an Asterisk server.
 
