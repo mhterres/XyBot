@@ -8,8 +8,6 @@ Este documento supõe que exista o seguinte cenário:
 * O Asterisk esteja configurado para uso da linguagem pt_br
 * O Asterisk está usando PJSIP
 
-Se o cenário for diferente, você precisará alterar alguns diretórios nos comandos seguintes
-
 XMPP
 ****
 
@@ -28,7 +26,7 @@ cat db/dbpgsql.sql | psql -U xybot -W xybot -h 127.0.0.1
 
 Se você estiver usando Realtime no Asterisk, você pode adicionar algumas colunas na sua tabela SIP (veja db/asterisk_dbpgsql_sample.sql - atenção especial as colunas xmpp_*)
 
-Se você não estiver usando Realtime no Asterisk or não quiser alterar seu banco de dados (recomendado), você pode utilizar o banco de dados modelo. Para usá-lo, rode os comandos:
+Se você não estiver usando Realtime no Asterisk ou não quiser alterar seu banco de dados (recomendado), você pode utilizar o banco de dados modelo. Para usá-lo, rode os comandos:
 
 su - postgres
 createuser -P -S -D -R asterisk_xybot
@@ -36,7 +34,7 @@ createdb -O asterisk_xybot asterisk_xybot
 exit
 cat db/asterisk_dbpgsql_sample.sql | psql -U asterisk_xybot -W asterisk_xybot -h 127.0.0.1
 
-Se você usar seu próprio db, preencha as colunas xmpp_* de seus registros. Se você usar o banco de exemplo, criar os ramais na tabela sip.
+Se você usar seu próprio db, preencha as colunas xmpp_* de seus registros. Se você usar o banco de exemplo, crie os ramais na tabela sip.
 
 Asterisk
 ********

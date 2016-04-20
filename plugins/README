@@ -1,0 +1,11 @@
+.yapsy-plugin file parameters
+
+[Core]
+Name = name of plugin (.py file without extension)
+Module = same of name
+   
+[Documentation]
+Description = Description of plugin
+Author = Name of author
+Version = version
+Website = website

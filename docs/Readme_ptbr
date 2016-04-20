@@ -1,11 +1,48 @@
+XyBot - bot XMPP que interage com Asterisk 
+******************************************
+
+Prova de conceito
+by Marcelo Hartmann Terres <mhterres@mundoopensource.com.br>
+Versão 0.1 - 2016/04/18
+
+Objetivo
+********
+
+O objetivo principal deste projeto é permitir aos usuários interagir com o Asterisk através do cliente XMPP.
+
+Usando a PoC
+************
+
+Após a instalação ser finalizada, basta acessar o diretório XyBot e rodar o script xybot.py (cd XyBot && ./xybot.py &).
+
+Entre na sala de conferência e comece a conversar com o usuário xybot.
+
 Monitors
 ********
+
+A estrutura de monitores do xybot permite que você mesmo possa criar novos monitores. O monitor é composto por dois arquivos: o monitor (.mon) que deve estar no subdiretório monitor e o script, que deve estar no subdiretório monitor/scripts.
+
+O arquivo monitor (.mon) é um arquivo ini e você pode obter mais informações sobre ele no arquivo monitor/README.
+
+O script pode ser escrito na linguagem que você desejar (python, perl, php, bash, etc...). O script deve retornar a informação que será usado na mensagem do monitor.
+
+Os scripts disponíveis são:
+ 
 * iaxpeerstatus - envia uma mensagem quando o status do peer iax monitorado muda.
 * asteriskprocess - envia uma mensagem quando o status do processo do Asterisk muda.
-* queuemonitorholdtime - envia uma mensagem se o tempo de espera na fila for maior que o tempo maximo permitido. Envia nova mensagem quando o tempo de espera volta ao valor aceitável.
+* queuemonitorholdtime - envia uma mensagem se o tempo de espera na fila for maior que o tempo maximo permitido. Envia nova mensagem quando o tempo de espera retornar ao valor aceitável.
 
 Plugins
 *******
+
+A estrutura de plugins do xybot permite que você crie novos plugins. O plugin é composto por dois arquivos: o arquivo de configuração (.yapsy-plugin) e o script python. Ambos devem estar no subdiretório plugins.
+
+O arquivo de configuração (.yapsy-plugin) é um arquivo ini e você pode obter mais informações sobre ele no arquivo plugins/README.
+
+Os plugins são criados usando Yapsy e você pode encontrar mais informações sobre o Yapsy em http://yapsy.sourceforge.net/.
+
+Os plugins disponíveis são:
+
 * bot_changelog: exibe o changelog
 * call: faz uma ligação para um ramal, se o jid tiver permissão
 * enterqueue: adiciona o ramal em uma fila
@@ -22,4 +59,3 @@ Plugins
 * uptime: mostra o uptime do bot
 * whoami: mostra suas informações
 * who_are_you: mais informações sobre XyBot
-

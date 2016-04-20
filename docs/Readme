@@ -1,14 +1,51 @@
+XyBot - XMPP MUC bot that interacts with Asterisk 
+*************************************************
+
+Proof of Concept
+by Marcelo Hartmann Terres <mhterres@mundoopensource.com.br>
+Version 0.1 - 2016/04/18
+
+The project
+***********
+
+The main goal of this project is to enable users to interact with Asterisk directly from XMPP client.
+
+Using the PoC
+*************
+
+After installation is completed, you need to access XyBot directory and run the xybot.py script (cd XyBot && ./xybot.py &).
+
+Enter the conference room and start talking with the xybot user.
+
 Monitors
 ********
+
+The XyBot monitor structure allows you to create new monitors. The monitor consists of two files: the monitor (.mon) that must be inside the monitor subdirectory and the script, which must be inside the monitor/scripts subdirectory.
+
+The monitor file (.mon) is a simple ini file and you can find more informations about it in monitor/README file.
+
+The script can be written in any language that you want (python, perl, php, bash, etc...). The script must return the information that will be used in monitor message.
+
+The available scripts are:
+ 
 * iaxpeerstatus - send a message when the status of an iax peer changes.
 * asteriskprocess - send a message when the status of Asterisk process changes.
-* queuemonitorholdtime - send a message if the hold time of a queue if greater than the maximum hold time allowed. Send another message when hold time returns to acceptable values.
+* queuemonitorholdtime - send a message if the hold time of a queue is greater than the maximum hold time allowed. Send another message when hold time returns to acceptable values.
 
 Plugins
 *******
+
+The XyBot plugins structure allows you to create new plugins. The plugin consists of two files: the config file (.yapsy-plugin) and the python script. Both files must be inside the plugins subdirectory.
+
+The config file (.yapsy-plugin) is a simple ini file and you can find more informations about it in plugins/README file.
+
+The plugins scripts are created using Yapsy and you can find more information about it at http://yapsy.sourceforge.net/.
+
+The available plugins are:
+ 
 * bot_changelog: exhibit the bot changelog
 * call: make a call to an extensions, if jid has permission
-* enterqueue: enter extension in a queue
+* enterqueue: add extension in a queue
 * help: show help
 * history: list history of MUC
 * last: list last logons and logoffs
@@ -22,5 +59,4 @@ Plugins
 * uptime: show bot uptime
 * whoami: show your informations
 * who_are_you: more informations about bot
-
 

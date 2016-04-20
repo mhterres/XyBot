@@ -8,8 +8,6 @@ This document supposes the following scenario:
 * Asterisk is using the english language
 * Asterisk is using PJSIP
 
-If you have a different scenario, you will need to change some directories in following operations.
-
 XMPP
 ****
 
@@ -43,12 +41,12 @@ Asterisk
 
 Create a new manager user (/etc/asterisk/manager.conf) that will be used by XyBot (sample configuration file in asterisk/etc/manager.conf.sample). 
 
-After create the new user, reload the manager configuration in Asterisk.
+After create the new user, you must reload the manager configuration in Asterisk.
 
 Final configurations
 ********************
 
-Access XyBot directory and run this commands:
+Access the XyBot directory and run this commands:
 
 mkdir /etc/xybot
 cp config/xybot.conf.sample /etc/xybot/xybot.conf
