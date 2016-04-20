@@ -17,14 +17,14 @@ Após a instalação ser finalizada, basta acessar o diretório XyBot e rodar o 
 
 Entre na sala de conferência e comece a conversar com o usuário xybot.
 
-Monitors
-********
+Agentes de monitoramentos
+*************************
 
-A estrutura de monitores do xybot permite que você mesmo possa criar novos monitores. O monitor é composto por dois arquivos: o monitor (.mon) que deve estar no subdiretório monitor e o script, que deve estar no subdiretório monitor/scripts.
+A estrutura de agentes de monitoramento do xybot permite que você mesmo possa criar novos agentes. O agente é composto por dois arquivos: o descritor do monitoramento (.mon) que deve estar no subdiretório monitor e o script, que deve estar no subdiretório monitor/scripts.
 
-O arquivo monitor (.mon) é um arquivo ini e você pode obter mais informações sobre ele no arquivo monitor/README.
+O arquivo descritor do monitoramento (.mon) é um arquivo ini e você pode obter mais informações sobre ele no arquivo monitor/README.
 
-O script pode ser escrito na linguagem que você desejar (python, perl, php, bash, etc...). O script deve retornar a informação que será usado na mensagem do monitor.
+O script pode ser escrito na linguagem que você desejar (python, perl, php, bash, etc...). O script deve retornar a informação que será usado na mensagem do agente.
 
 Os scripts disponíveis são:
  
@@ -55,7 +55,7 @@ Os plugins disponíveis são:
 * plugins: exibe os plugins disponíveis
 * sms: envia um SMS, se o jid tiver permissão
 * sysinfo: mostra informações do Asterisk (somente admins)
-* update_monitoring: recheca os scripts de monitoramentos e atualiza os dados
+* update_monitoring: recheca os items monitorados e atualiza os dados
 * uptime: mostra o uptime do bot
 * whoami: mostra suas informações
 * who_are_you: mais informações sobre XyBot

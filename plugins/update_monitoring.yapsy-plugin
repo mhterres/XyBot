@@ -3,7 +3,7 @@ Name = update_monitoring
 Module = update_monitoring
    
 [Documentation]
-Description = Plugin to update monitoring values
+Description = Plugin to recheck and update monitoring items data
 Author = Marcelo Terres
 Version = 0.1
 Website = http://www.mundoopensource.com.br

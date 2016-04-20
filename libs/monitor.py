@@ -3,7 +3,7 @@
 
 
 #	monitor.py
-#	Monitoring class
+#	Monitoring agent class
 #
 #	Marcelo Hartmann Terres <mhterres@gmail.com>
 #	2016/04/15
@@ -115,10 +115,10 @@ class Monitor(Thread):
 
 		if len(self.monitors)==0:
 
-			output="No monitors available."
+			output="No monitoring agents available."
 		else:
 
-			output="Monitors available:"
+			output="Monitoring agents available:"
 
 			for monitor in self.monitors:
 

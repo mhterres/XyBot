@@ -56,5 +56,5 @@ Edit file /etc/xybot/xybot.conf and adjust the parameters
 
 SAMPLES
 *******
-If you want to use queuemonitorholdtime monitor and/or playmsg plugin, you should use the sample data in samples subdirectory.
+If you want to use queuemonitorholdtime monitoring agent and/or playmsg plugin, you should use the sample data in samples subdirectory.
 

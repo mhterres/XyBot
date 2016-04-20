@@ -5,7 +5,7 @@ This project (PoC) shows the possibilities of use of an XMPP bot integrated with
 
 The main goal of this project is to enable users to interact with asterisk directly from your XMPP client.
 
-Xybot was built to provide an expandable structure of plugins and monitors that allow system administrators to deploy their own resources.
+Xybot was built to provide an expandable structure of plugins and monitoring agents that allow system administrators to deploy their own resources.
 
 The directories contains:
 
@@ -13,10 +13,10 @@ The directories contains:
 * config - sample configuration file
 * db - database schema and asterisk database sample schema
 * docs - documentation
-* monitor - monitor files
-* monitor/scripts - scripts used by monitor files
+* monitor - monitoring agent files
+* monitor/scripts - scripts used by monitoring agents
 * plugins - plugins files
-* samples - sample files for some plugins and monitor items
+* samples - sample files for some plugins and monitoring agents
 * tests - scripts for testing
 
 If you find bugs, please send e-mail to bugs@mundoopensource.com.br.

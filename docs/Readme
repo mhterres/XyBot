@@ -17,14 +17,14 @@ After installation is completed, you need to access XyBot directory and run the 
 
 Enter the conference room and start talking with the xybot user.
 
-Monitors
-********
+Monitoring agents
+*****************
 
-The XyBot monitor structure allows you to create new monitors. The monitor consists of two files: the monitor (.mon) that must be inside the monitor subdirectory and the script, which must be inside the monitor/scripts subdirectory.
+The XyBot monitoring agents structure allows you to create new agents. The agent consists of two files: the monitoring description (.mon) that must be inside the monitor subdirectory and the script, which must be inside the monitor/scripts subdirectory.
 
-The monitor file (.mon) is a simple ini file and you can find more informations about it in monitor/README file.
+The monitoring description file (.mon) is a simple ini file and you can find more informations about it in monitor/README file.
 
-The script can be written in any language that you want (python, perl, php, bash, etc...). The script must return the information that will be used in monitor message.
+The script can be written in any language that you want (python, perl, php, bash, etc...). The script must return the information that will be used in agent message.
 
 The available scripts are:
  

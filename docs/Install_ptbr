@@ -56,5 +56,5 @@ Edite o arquivo /etc/xybot/xybot.conf e ajuste os parâmetros
 
 SAMPLES
 *******
-Se você quiser usar o monitor queuemonitorholdtime  e/ou o plugin playmsg, você deve usar os dados de exemplo que existem no subdiretório samples.
+Se você quiser usar o agente de monitoramento queuemonitorholdtime  e/ou o plugin playmsg, você deve usar os dados de exemplo que existem no subdiretório samples.
 
