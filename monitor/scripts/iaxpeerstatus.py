@@ -40,7 +40,7 @@ for event in events:
 
 				try:
 
-					returnmsg="Status %s" % event['Status']
+					returnmsg="Status %s" % event['Status'].split("(")[0]
 					break
 				except:
 					pass
