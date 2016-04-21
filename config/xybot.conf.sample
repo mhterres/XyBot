@@ -21,7 +21,7 @@ dbpgsql_pwd=secret
 ami_srv=Asterisk server
 ami_port=5038
 ami_user=Manager user
-ami_pwd=secret
+ami_secret=secret
 
 ast_db_host=Asterisk DB Server
 ast_db_name=asterisk
