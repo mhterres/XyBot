@@ -5,3 +5,4 @@ message=Asterisk is %s.
 newmessage=Asterisk is %s.
 check=120
 integer=0
+alwaysshowmessage=0

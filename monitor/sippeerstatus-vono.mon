@@ -1,0 +1,8 @@
+[general]
+name=sip-vono
+script=sippeerstatus.py vono
+message=SIP vono %s.
+newmessage=SIP vono %s.
+check=120
+integer=0
+alwaysshowmessage=0

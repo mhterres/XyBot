@@ -5,3 +5,4 @@ message=IAX Propus %s.
 newmessage=IAX Propus %s.
 check=120
 integer=0
+alwaysshowmessage=0

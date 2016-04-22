@@ -44,7 +44,7 @@ class Monitor(Thread):
 			parser=ConfigParser.RawConfigParser()
 			parser.read(file)
 
-			monitors.append([parser.get("general","name"),parser.get("general","script"),parser.get("general","message"),parser.get("general","newmessage"),parser.get("general","check"),parser.get("general","integer"),"",""])
+			monitors.append([parser.get("general","name"),parser.get("general","script"),parser.get("general","message"),parser.get("general","newmessage"),parser.get("general","check"),parser.get("general","integer"),parser.get("general","alwaysshowmessage"),"",""])
 
 		self.monitors=monitors
 
@@ -71,13 +71,13 @@ class Monitor(Thread):
 
 			if not init:
 
-				if now - int(monitor[6].split(".")[0]) > int(monitor[4]):
+				if now - int(monitor[7].split(".")[0]) > int(monitor[4]):
 
 					check = True
 
 			new = False
 
-			if monitor[7] == "":
+			if monitor[8] == "":
 
 				new=True
 
@@ -94,20 +94,27 @@ class Monitor(Thread):
 
 					if not new:
 
-						if monitor[5]=="1":
-					
-							if output != monitor[7]:
+						if monitor[6]=="1":
 
-								diff=int(output) - int(monitor[7])
-								self.msg(msg_to,monitor[3] % str(diff),msg_type)
-						else:
-
-							if monitor[7] != output:
+							if len(output)>0:
 
 								self.msg(msg_to,monitor[3] % output,msg_type)
+						else:
 
-				self.monitors[i][6]=str(now)
-				self.monitors[i][7]=output
+							if monitor[5]=="1":
+					
+								if output != monitor[8]:
+
+									diff=int(output) - int(monitor[8])
+									self.msg(msg_to,monitor[3] % str(diff),msg_type)
+							else:
+
+								if monitor[8] != output:
+	
+									self.msg(msg_to,monitor[3] % output,msg_type)
+
+				self.monitors[i][7]=str(now)
+				self.monitors[i][8]=output
 
 			i=i+1
 
@@ -122,7 +129,7 @@ class Monitor(Thread):
 
 			for monitor in self.monitors:
 
-				output+="\n%s - %s - %s" % (datetime.datetime.fromtimestamp(int(monitor[6].split(".")[0])).strftime('%Y-%m-%d %H:%M'),monitor[0],monitor[2] % monitor[7])
+				output+="\n%s - %s - %s" % (datetime.datetime.fromtimestamp(int(monitor[7].split(".")[0])).strftime('%Y-%m-%d %H:%M'),monitor[0],monitor[2] % monitor[8])
 
 		self.msg(msg_to,output,msg_type)
 
@@ -131,4 +138,5 @@ class Monitor(Thread):
 		self.bot.send_message(mto=msg_to,mbody=msg,mtype=msg_type)
 
 		
+
 
