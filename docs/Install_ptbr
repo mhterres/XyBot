@@ -6,7 +6,6 @@ Este documento supõe que exista o seguinte cenário:
 * Os requerimentos indicados (docs/Requerimentos) estejam sendo atendidos
 * O Asterisk tenha sido compilado dos fontes
 * O Asterisk esteja configurado para uso da linguagem pt_br
-* O Asterisk está usando PJSIP
 
 XMPP
 ****

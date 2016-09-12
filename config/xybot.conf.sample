@@ -2,6 +2,7 @@
 botname=myname
 logfile=/var/log/xybot.log
 debug=0
+siptype=SIP
 
 [xmpp]
 jid=myname@yourjabberdomain.com

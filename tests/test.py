@@ -18,8 +18,9 @@ ami=AMI(cfg.ami_srv,cfg.ami_port,cfg.ami_user,cfg.ami_secret)
 #events=ami.sendAction([("Action","QueueSummary")])
 #events=ami.sendAction([("Action","CoreStatus")])
 #events=ami.sendAction([("Action","CoreSettings")])
-events=ami.sendAction([("Action","QueueStatus"),("Queue","myqueue")])
-#events=ami.sendAction([("Action","QueueStatus"),("Queue","myqueue"),("Interface","PJSIP/1000")])
+#events=ami.sendAction([("Action","QueueStatus"),("Queue","myqueue")])
+events=ami.sendAction([("Action","SIPpeerstatus"),("Peer","1000")])
+#events=ami.sendAction([("Action","QueueStatus"),("Queue","myqueue"),("Interface","SIP/1000")])
 
 print ami.lastDictAMI
 print events

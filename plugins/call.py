@@ -98,7 +98,7 @@ class call(IPlugin):
 
 						action = []
 						action.append(('Action','Originate'))
-						action.append(('Channel',"PJSIP/%s" % number))
+						action.append(('Channel',"%s/%s" % (cfg.siptype,number)))
 						action.append(('Exten',"%s" % extension_number))
 						action.append(('CallerID','Call from %s' % extension_number))
 						action.append(('Context',self.call_context))

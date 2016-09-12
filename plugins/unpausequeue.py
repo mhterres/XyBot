@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 """
-	leavequeue.py
+	unpausequeue.py
 """
 
 import re
@@ -17,16 +17,16 @@ from libs.ami import AMIDict
 
 from libs.asterisk_rt import getAsteriskRealtimeInformation
 
-class leaveQueue(IPlugin):
+class unpauseQueue(IPlugin):
 
 	def __init__(self):
 
-		self.name="leavequeue"
+		self.name="unpausequeue"
 		self.type="both"
-		self.regexp=["^[lL]eave[qQ]ueue (.+)"]
+		self.regexp=["^[uU]npause[qQ]ueue (.+)"]
 		self.re = [ re.compile(expr) for expr in self.regexp ]
-		self.syntax="leavequeue <queue name>"
-		self.description="remove extension from queue"
+		self.syntax="unpausequeue <queue name>"
+		self.description="unpause extension in a queue"
 		self.answers="xmpp"
 
 	def match(self,cmd):
@@ -86,9 +86,10 @@ class leaveQueue(IPlugin):
 					else:
 
 						action = []
-						action.append(('Action','QueueRemove'))
+						action.append(('Action','QueuePause'))
 						action.append(('Queue',queue))
 						action.append(('Interface',"%s/%s" % (cfg.siptype,extension_number)))
+						action.append(('Paused','false'))
 
 						ami.sendAction(action)
 						
@@ -103,13 +104,13 @@ class leaveQueue(IPlugin):
 
 						if response != 'Success':
 
-							output="ERROR: It's not possible to remove %s from queue %s." % (extension_number,queue)
+							output="ERROR: It's not possible to unpause %s on queue %s." % (extension_number,queue)
 							data['bot'].send_message(mto=data['msg_to'],mbody=output,mtype=data['msg_type'])
 
 							return False
 						else:
 
-							output="Extension %s is removed from queue %s" % (extension_number,queue)
+							output="Extension %s unpaused in queue %s" % (extension_number,queue)
 							data['bot'].send_message(mto=data['msg_to'],mbody=output,mtype=data['msg_type'])
 
 							return True

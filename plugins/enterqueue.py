@@ -88,7 +88,7 @@ class enterQueue(IPlugin):
 						action = []
 						action.append(('Action','QueueAdd'))
 						action.append(('Queue',queue))
-						action.append(('Interface',"PJSIP/%s" % extension_number))
+						action.append(('Interface',"%s/%s" % (cfg.siptype,extension_number)))
 						action.append(('MemberName',extension_callerid))
 
 						ami.sendAction(action)

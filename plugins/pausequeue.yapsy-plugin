@@ -1,9 +1,9 @@
 [Core]
-Name = leavequeue
-Module = leavequeue
+Name = pausequeue
+Module = pausequeue
    
 [Documentation]
-Description = Plugin to remove extension from an Asterisk queue
+Description = Plugin to pause extension in an Asterisk queue
 Author = Marcelo Terres
 Version = 0.1
 Website = http://www.mundoopensource.com.br

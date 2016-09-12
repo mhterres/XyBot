@@ -6,7 +6,6 @@ This document supposes the following scenario:
 * All requirements are ok (docs/Requeriments)
 * Asterisk was compiled from source
 * Asterisk is using the english language
-* Asterisk is using PJSIP
 
 XMPP
 ****

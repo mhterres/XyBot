@@ -25,6 +25,7 @@ class Config:
 		self.botname=configuration.get('general','botname')
 		self.logfile=configuration.get('general','logfile')
 		self.debug=configuration.get('general','debug')
+		self.siptype=configuration.get('general','siptype')
 
 		# xmpp
 		self.jid=configuration.get('xmpp','jid')

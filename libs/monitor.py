@@ -129,8 +129,12 @@ class Monitor(Thread):
 
 			for monitor in self.monitors:
 
-				output+="\n%s - %s - %s" % (datetime.datetime.fromtimestamp(int(monitor[7].split(".")[0])).strftime('%Y-%m-%d %H:%M'),monitor[0],monitor[2] % monitor[8])
+				if len(monitor[8])>0:
 
+					output+="\n%s - %s - %s" % (datetime.datetime.fromtimestamp(int(monitor[7].split(".")[0])).strftime('%Y-%m-%d %H:%M'),monitor[0],monitor[2] % monitor[8])
+				else:
+
+					output+="\n%s - %s - OK" % (datetime.datetime.fromtimestamp(int(monitor[7].split(".")[0])).strftime('%Y-%m-%d %H:%M'),monitor[0])
 		self.msg(msg_to,output,msg_type)
 
 	def msg(self,msg_to,msg,msg_type):
